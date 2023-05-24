@@ -26,36 +26,36 @@ namespace Completed
         public void HandleAttemptMove()
         {
             // TODO: Change the reward below as appropriate. If you want to add a cost per move, you could change the reward to -1.0f (for example).
-            AddReward(0.0f);
+            AddReward(0f);
         }
 
         public void HandleFinishlevel()
         {
             // TODO: Change the reward below as appropriate.
-            AddReward(0.0f);
+            AddReward(0f);
         }
 
         public void HandleFoundFood()
         {
             // TODO: Change the reward below as appropriate.
-            AddReward(0.0f);
+            AddReward(5f);
         }
 
         public void HandleFoundSoda()
         {
             // TODO: Change the reward below as appropriate.
-            AddReward(0.0f);
+            AddReward(7f);
         }
         public void HandleLoseFood(int loss)
         {
             // TODO: Change the reward below as appropriate.
-            AddReward(0.0f);
+            AddReward(-loss);
         }
 
         public void HandleReachedExit()
         {
             // TODO: Change the reward below as appropriate.
-            AddReward(0.0f);
+            AddReward(10f);
         }
 
         public void HandleLevelRestart(bool gameOver)
@@ -81,6 +81,7 @@ namespace Completed
             {
                 sensor.AddObservation(0.0f);
             }
+            // sensor.AddObservation(transform.localPosition.normalized);
 
             base.CollectObservations(sensor);
         }
