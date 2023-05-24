@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿//using System.Transactions;
+//using System.Threading.Tasks.Dataflow;
+using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
@@ -82,6 +84,9 @@ namespace Completed
             //     sensor.AddObservation(0.0f);
             // }
             sensor.AddObservation(transform.localRotation.normalized);
+
+            sensor.AddObservation(transform.position.x);
+            sensor.AddObservation(transform.position.y);
 
             base.CollectObservations(sensor);
         }
