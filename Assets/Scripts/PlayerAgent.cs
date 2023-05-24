@@ -32,7 +32,7 @@ namespace Completed
         public void HandleFinishlevel()
         {
             // TODO: Change the reward below as appropriate.
-            AddReward(0f);
+            HandleReachedExit();
         }
 
         public void HandleFoundFood()
@@ -55,7 +55,7 @@ namespace Completed
         public void HandleReachedExit()
         {
             // TODO: Change the reward below as appropriate.
-            AddReward(10f);
+            AddReward(5f);
         }
 
         public void HandleLevelRestart(bool gameOver)
@@ -77,11 +77,11 @@ namespace Completed
             // TODO: Insert proper code here for collecting the observations!
             // At the moment this code just feeds in 10 observations, all hardcoded to zero, as a placeholder.
 
-            for (int i = 0; i < 10; i++)
-            {
-                sensor.AddObservation(0.0f);
-            }
-            // sensor.AddObservation(transform.localPosition.normalized);
+            // for (int i = 0; i < 10; i++)
+            // {
+            //     sensor.AddObservation(0.0f);
+            // }
+            sensor.AddObservation(transform.localRotation.normalized);
 
             base.CollectObservations(sensor);
         }
