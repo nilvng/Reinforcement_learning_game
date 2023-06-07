@@ -1,0 +1,47 @@
+{
+    "PlayerBehaviour": {
+        "checkpoints": [
+            {
+                "steps": 499952,
+                "file_path": "results/state-sensor7/PlayerBehaviour/PlayerBehaviour-499952.onnx",
+                "reward": 27.0,
+                "creation_time": 1686109962.0349271,
+                "auxillary_file_paths": [
+                    "results/state-sensor7/PlayerBehaviour/PlayerBehaviour-499952.pt"
+                ]
+            },
+            {
+                "steps": 999937,
+                "file_path": "results/state-sensor7/PlayerBehaviour/PlayerBehaviour-999937.onnx",
+                "reward": 59.0,
+                "creation_time": 1686110729.5474932,
+                "auxillary_file_paths": [
+                    "results/state-sensor7/PlayerBehaviour/PlayerBehaviour-999937.pt"
+                ]
+            },
+            {
+                "steps": 1000001,
+                "file_path": "results/state-sensor7/PlayerBehaviour/PlayerBehaviour-1000001.onnx",
+                "reward": 59.0,
+                "creation_time": 1686110729.571808,
+                "auxillary_file_paths": [
+                    "results/state-sensor7/PlayerBehaviour/PlayerBehaviour-1000001.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000001,
+            "file_path": "results/state-sensor7/PlayerBehaviour.onnx",
+            "reward": 59.0,
+            "creation_time": 1686110729.571808,
+            "auxillary_file_paths": [
+                "results/state-sensor7/PlayerBehaviour/PlayerBehaviour-1000001.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.1.0.dev20230514"
+    }
+}

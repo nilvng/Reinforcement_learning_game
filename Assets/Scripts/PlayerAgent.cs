@@ -34,7 +34,7 @@ namespace Completed
         public void HandleFinishlevel()
         {
             // TODO: Change the reward below as appropriate.
-            HandleReachedExit();
+            AddReward(5f);
         }
 
         public void HandleFoundFood()
@@ -54,12 +54,6 @@ namespace Completed
             AddReward(-5);
         }
 
-        public void HandleReachedExit()
-        {
-            // TODO: Change the reward below as appropriate.
-            AddReward(5f);
-        }
-
         public void HandleLevelRestart(bool gameOver)
         {
             if (gameOver)
@@ -67,10 +61,6 @@ namespace Completed
                 Debug.Log("Level Reached" + gameManager.level);
                 Academy.Instance.StatsRecorder.Add("Level Reached", gameManager.level);
                 EndEpisode();
-            }
-            else
-            {
-                HandleReachedExit();
             }
         }
 

@@ -2,22 +2,23 @@ behaviors:
   PlayerBehaviour:
     trainer_type: ppo
     hyperparameters:
-      batch_size: 32
-      buffer_size: 2048
+      batch_size: 64
+      buffer_size: 512
       learning_rate: 3e-4
       beta: 0.0005
       epsilon: 0.2
       lambd: 0.95
-      num_epoch: 10
+      num_epoch: 5 # Number of passes to make through the experience buffer when performing gradient descent optimization
       learning_rate_schedule: linear
     network_settings:
       normalize: true
-      hidden_units: 256
+      hidden_units: 128
       num_layers: 2
     reward_signals:
       extrinsic:
         gamma: 0.99
         strength: 1
-    max_steps: 999999999
-    time_horizon: 5
-    summary_freq: 5000
+    max_steps: 1e6
+    time_horizon: 64 # How many steps of experience to collect per-agent before adding it to the experience buffer.
+    summary_freq: 10000 # Number of experiences that needs to be collected before generating and displaying training statistics.
+    threaded: True
