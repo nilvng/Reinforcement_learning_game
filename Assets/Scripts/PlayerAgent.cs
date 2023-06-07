@@ -27,31 +27,26 @@ namespace Completed
 
         public void HandleAttemptMove()
         {
-            // TODO: Change the reward below as appropriate. If you want to add a cost per move, you could change the reward to -1.0f (for example).
             AddReward(0f);
         }
 
         public void HandleFinishlevel()
         {
-            // TODO: Change the reward below as appropriate.
             AddReward(5f);
         }
 
         public void HandleFoundFood()
         {
-            // TODO: Change the reward below as appropriate.
-            AddReward(5f);
+            AddReward(2f);
         }
 
         public void HandleFoundSoda()
         {
-            // TODO: Change the reward below as appropriate.
-            AddReward(7f);
+            AddReward(3f);
         }
         public void HandleLoseFood(int loss)
         {
-            // TODO: Change the reward below as appropriate.
-            AddReward(-5);
+            AddReward(-2);
         }
 
         public void HandleLevelRestart(bool gameOver)
@@ -67,12 +62,6 @@ namespace Completed
         public override void CollectObservations(VectorSensor sensor)
         {
             // TODO: Insert proper code here for collecting the observations!
-            // At the moment this code just feeds in 10 observations, all hardcoded to zero, as a placeholder.
-
-            // for (int i = 0; i < 10; i++)
-            // {
-            //     sensor.AddObservation(0.0f);
-            // }
             sensor.AddObservation(transform.localRotation.normalized);
 
             sensor.AddObservation(transform.localPosition);

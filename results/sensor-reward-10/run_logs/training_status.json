@@ -1,0 +1,47 @@
+{
+    "PlayerBehaviour": {
+        "checkpoints": [
+            {
+                "steps": 499936,
+                "file_path": "results/sensor-reward-10/PlayerBehaviour/PlayerBehaviour-499936.onnx",
+                "reward": 47.0,
+                "creation_time": 1686117985.552663,
+                "auxillary_file_paths": [
+                    "results/sensor-reward-10/PlayerBehaviour/PlayerBehaviour-499936.pt"
+                ]
+            },
+            {
+                "steps": 999996,
+                "file_path": "results/sensor-reward-10/PlayerBehaviour/PlayerBehaviour-999996.onnx",
+                "reward": 52.0,
+                "creation_time": 1686119445.032154,
+                "auxillary_file_paths": [
+                    "results/sensor-reward-10/PlayerBehaviour/PlayerBehaviour-999996.pt"
+                ]
+            },
+            {
+                "steps": 1005207,
+                "file_path": "results/sensor-reward-10/PlayerBehaviour/PlayerBehaviour-1005207.onnx",
+                "reward": 85.33333333333333,
+                "creation_time": 1686119474.3493838,
+                "auxillary_file_paths": [
+                    "results/sensor-reward-10/PlayerBehaviour/PlayerBehaviour-1005207.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1005207,
+            "file_path": "results/sensor-reward-10/PlayerBehaviour.onnx",
+            "reward": 85.33333333333333,
+            "creation_time": 1686119474.3493838,
+            "auxillary_file_paths": [
+                "results/sensor-reward-10/PlayerBehaviour/PlayerBehaviour-1005207.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.1.0.dev20230514"
+    }
+}
