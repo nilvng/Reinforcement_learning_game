@@ -51,7 +51,7 @@ namespace Completed
         public void HandleLoseFood(int loss)
         {
             // TODO: Change the reward below as appropriate.
-            AddReward(-loss);
+            AddReward(-5);
         }
 
         public void HandleReachedExit()
@@ -85,8 +85,7 @@ namespace Completed
             // }
             sensor.AddObservation(transform.localRotation.normalized);
 
-            sensor.AddObservation(transform.position.x);
-            sensor.AddObservation(transform.position.y);
+            sensor.AddObservation(transform.localPosition);
 
             base.CollectObservations(sensor);
         }
