@@ -32,7 +32,7 @@ namespace Completed
 
         public void HandleFinishlevel()
         {
-            AddReward(5f);
+            AddReward(3f);
         }
 
         public void HandleFoundFood()
