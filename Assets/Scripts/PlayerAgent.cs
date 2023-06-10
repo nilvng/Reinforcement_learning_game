@@ -27,26 +27,26 @@ namespace Completed
 
         public void HandleAttemptMove()
         {
-            AddReward(0f);
+            AddReward(0.001f);
         }
 
         public void HandleFinishlevel()
         {
-            AddReward(3f);
+            AddReward(1f);
         }
 
         public void HandleFoundFood()
         {
-            AddReward(2f);
+            AddReward(1.2f);
         }
 
         public void HandleFoundSoda()
         {
-            AddReward(3f);
+            AddReward(1.4f);
         }
-        public void HandleLoseFood(int loss)
+        public void HandleBeingHit(int loss)
         {
-            AddReward(-2);
+            AddReward(-0.01f);
         }
 
         public void HandleLevelRestart(bool gameOver)
@@ -61,10 +61,10 @@ namespace Completed
 
         public override void CollectObservations(VectorSensor sensor)
         {
-            // TODO: Insert proper code here for collecting the observations!
-            sensor.AddObservation(transform.localRotation.normalized);
 
             sensor.AddObservation(transform.localPosition);
+
+            sensor.AddObservation(player.food);
 
             base.CollectObservations(sensor);
         }

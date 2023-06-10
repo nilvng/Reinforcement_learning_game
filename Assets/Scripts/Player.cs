@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;   //Allows us to use UI.
@@ -249,7 +249,7 @@ namespace Completed
 
             //Subtract lost food points from the players total.
             food -= loss;
-            agent.HandleLoseFood(loss);
+            agent.HandleBeingHit(loss);
 
             //Update the food display with the new total.
             foodText.text = "-" + loss + " Food: " + food;
