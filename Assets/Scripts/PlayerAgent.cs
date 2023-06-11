@@ -27,26 +27,31 @@ namespace Completed
 
         public void HandleAttemptMove()
         {
-            AddReward(0.001f);
+            AddReward(-0.01f);
         }
 
         public void HandleFinishlevel()
         {
-            AddReward(1f);
+            AddReward(0.8f);
         }
 
         public void HandleFoundFood()
         {
-            AddReward(1.2f);
+            AddReward(0.8f);
         }
 
         public void HandleFoundSoda()
         {
-            AddReward(1.4f);
+            AddReward(1f);
         }
         public void HandleBeingHit(int loss)
         {
-            AddReward(-0.01f);
+            AddReward(-0.05f);
+        }
+
+        public void HandleBeingStuck()
+        {
+            HandleLevelRestart(true);
         }
 
         public void HandleLevelRestart(bool gameOver)

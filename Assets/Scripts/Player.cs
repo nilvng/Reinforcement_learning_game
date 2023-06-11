@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;   //Allows us to use UI.
@@ -256,6 +256,7 @@ namespace Completed
 
             //Check to see if game has ended.
             CheckIfGameOver();
+            CheckIfStuck();
         }
 
 
@@ -287,6 +288,18 @@ namespace Completed
                 //Invoke the Restart function to start the next level with a delay of restartLevelDelay (default 1 second).
                 Invoke("Restart", gameManager.restartLevelDelay);
             }
+        }
+        private void CheckIfStuck()
+        {
+            if (Move(1, 0) || Move(-1, 0) || Move(0, 1) || Move(0, -1))
+            {
+                return;
+            }
+            enabled = false;
+            gameManager.GameOver();
+            gameOver = true;
+            agent.HandleBeingStuck();
+            Invoke("Restart", gameManager.restartLevelDelay);
         }
     }
 }
