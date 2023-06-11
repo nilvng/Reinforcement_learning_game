@@ -46,7 +46,7 @@ namespace Completed
         }
         public void HandleBeingHit(int loss)
         {
-            AddReward(-0.05f);
+            AddReward(-0.1f);
         }
 
         public void HandleBeingStuck()
@@ -70,6 +70,8 @@ namespace Completed
             sensor.AddObservation(transform.localPosition);
 
             sensor.AddObservation(player.food);
+            sensor.AddObservation(gameManager.level);
+            sensor.AddObservation(lastAction);
 
             base.CollectObservations(sensor);
         }
