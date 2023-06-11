@@ -1,0 +1,27 @@
+behaviors:
+  PlayerBehaviour:
+    trainer_type: sac
+    hyperparameters:
+      batch_size: 64
+      buffer_size: 2096
+      learning_rate: 3e-4
+      learning_rate_schedule: linear
+      init_entcoef: 0.08
+
+    network_settings:
+      normalize: true
+      hidden_units: 64
+      num_layers: 2
+      memory:
+        memory_size: 32
+        sequence_length: 24
+
+    reward_signals:
+      extrinsic:
+        gamma: 0.8
+        strength: 0.9
+
+    max_steps: 1e6
+    time_horizon: 32 # How many steps of experience to collect per-agent before adding it to the experience buffer.
+    summary_freq: 10000 # Number of experiences that needs to be collected before generating and displaying training statistics.
+    threaded: True
