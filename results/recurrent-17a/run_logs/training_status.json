@@ -1,0 +1,47 @@
+{
+    "PlayerBehaviour": {
+        "checkpoints": [
+            {
+                "steps": 499992,
+                "file_path": "results/recurrent-17a/PlayerBehaviour/PlayerBehaviour-499992.onnx",
+                "reward": null,
+                "creation_time": 1686469466.242187,
+                "auxillary_file_paths": [
+                    "results/recurrent-17a/PlayerBehaviour/PlayerBehaviour-499992.pt"
+                ]
+            },
+            {
+                "steps": 999979,
+                "file_path": "results/recurrent-17a/PlayerBehaviour/PlayerBehaviour-999979.onnx",
+                "reward": null,
+                "creation_time": 1686470716.111426,
+                "auxillary_file_paths": [
+                    "results/recurrent-17a/PlayerBehaviour/PlayerBehaviour-999979.pt"
+                ]
+            },
+            {
+                "steps": 1000075,
+                "file_path": "results/recurrent-17a/PlayerBehaviour/PlayerBehaviour-1000075.onnx",
+                "reward": null,
+                "creation_time": 1686470716.2255318,
+                "auxillary_file_paths": [
+                    "results/recurrent-17a/PlayerBehaviour/PlayerBehaviour-1000075.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000075,
+            "file_path": "results/recurrent-17a/PlayerBehaviour.onnx",
+            "reward": null,
+            "creation_time": 1686470716.2255318,
+            "auxillary_file_paths": [
+                "results/recurrent-17a/PlayerBehaviour/PlayerBehaviour-1000075.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.11.0"
+    }
+}

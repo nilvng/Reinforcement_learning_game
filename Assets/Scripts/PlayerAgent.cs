@@ -27,22 +27,22 @@ namespace Completed
 
         public void HandleAttemptMove()
         {
-            AddReward(-0.01f);
+            AddReward(-0.001f);
         }
 
         public void HandleFinishlevel()
         {
-            AddReward(0.8f);
+            AddReward(0.4f);
         }
 
         public void HandleFoundFood()
         {
-            AddReward(0.8f);
+            AddReward(0.4f);
         }
 
         public void HandleFoundSoda()
         {
-            AddReward(0.9f);
+            AddReward(0.5f);
         }
         public void HandleBeingHit(int loss)
         {
@@ -60,6 +60,7 @@ namespace Completed
             {
                 Debug.Log("Level Reached" + gameManager.level);
                 Academy.Instance.StatsRecorder.Add("Level Reached", gameManager.level);
+                AddReward(-1f);
                 EndEpisode();
             }
         }
@@ -67,12 +68,7 @@ namespace Completed
         public override void CollectObservations(VectorSensor sensor)
         {
 
-            sensor.AddObservation(transform.localPosition);
-
             sensor.AddObservation(player.food);
-            sensor.AddObservation(gameManager.level);
-            sensor.AddObservation(lastAction);
-
             base.CollectObservations(sensor);
         }
 
