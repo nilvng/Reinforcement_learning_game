@@ -42,11 +42,11 @@ namespace Completed
 
         public void HandleFoundSoda()
         {
-            AddReward(1f);
+            AddReward(0.9f);
         }
         public void HandleBeingHit(int loss)
         {
-            AddReward(-0.1f);
+            AddReward(-0.2f);
         }
 
         public void HandleBeingStuck()
